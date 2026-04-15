@@ -1,4 +1,5 @@
 import Countdown from './components/Countdown';
+import DeadlineCountdown from './components/DeadlineCountdown';
 
 const stats = [
   { label: 'Applicants', value: '24', icon: '👥' },
@@ -32,14 +33,17 @@ export default function Home() {
             <a href="https://clawcomp.net" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Apply</a>
             <a href="https://clawcomp.net" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Sponsors</a>
           </nav>
-          <a
-            href="https://clawcomp.net"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-semibold px-4 py-2 rounded-lg transition-colors"
-          >
-            Apply Now
-          </a>
+          <div className="flex flex-col items-end">
+            <a
+              href="https://clawcomp.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-semibold px-4 py-2 rounded-lg transition-colors"
+            >
+              Apply Now
+            </a>
+            <DeadlineCountdown />
+          </div>
         </div>
       </header>
 
